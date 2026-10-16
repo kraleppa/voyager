@@ -149,7 +149,7 @@ jobs:
       - name: Install Tauri CLI
         shell: bash
         run: |
-          # Must match the tauri crate, or the bundler cannot mark the bundle type the updater relies on.
+          # tauri-cli older than 2.10 cannot write __TAURI_BUNDLE_TYPE, so the updater cannot tell a .deb from an AppImage.
           if [ "$(cargo-tauri --version 2>/dev/null)" != "tauri-cli 2.12.3" ]; then
             cargo install tauri-cli --version "=2.12.3" --locked --force
           else
