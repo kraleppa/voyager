@@ -5,16 +5,16 @@ Voyager on Linux is distributed as a `.deb` package and an [AppImage](https://ap
 ### Debian and Ubuntu (recommended)
 
 ```sh
-sudo apt install ./Voyager-linux-amd64.deb
+sudo apt install ./Voyager-linux-amd64-*.deb
 ```
 
-Voyager appears in your application launcher and updates itself in place.
+Voyager appears in your application launcher and updates itself in place; installing an update asks for your password.
 
 ### Other distributions: AppImage
 
 ```sh
-chmod +x Voyager-linux-amd64.AppImage
-./Voyager-linux-amd64.AppImage
+chmod +x Voyager-linux-amd64-*.AppImage
+./Voyager-linux-amd64-*.AppImage
 ```
 
 The AppImage needs FUSE 2. On distributions that no longer ship it, install `libfuse2` (`libfuse2t64` on Ubuntu 24.04+) or use the `.deb` package.
